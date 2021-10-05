@@ -27,6 +27,7 @@
 ** cs162
 :PROPERTIES:
 :ID:       378402e9-a0ee-4a41-9f7a-7c6e718d149c
+:prereqs:
 :END:
 ** cs288
 :PROPERTIES:

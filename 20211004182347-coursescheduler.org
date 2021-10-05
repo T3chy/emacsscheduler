@@ -15,4 +15,5 @@ Each class is a org-roam node (with unique id), and the following properties
 - headline per semester
 - outputs to 4 year planning pdf if I can get source for it
 - calculates gpa (weighted w/ course units)
+- checks prereqs in order, highlights in red with maybe a note if untakable? allows for override?
 

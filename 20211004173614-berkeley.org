@@ -15,9 +15,17 @@ nothing... yet >:)
 *** [[id:9cc23d47-c537-4606-bbcc-ba08170577e6][cs70]] 
 *** [[id:fdf74abd-8449-4783-a092-cefd352411ce][math1b]]
 *** [[id:b5a4e7bb-a4bd-40eb-b680-bf4aa14e1e26][bioe10]]
-*** [[id:80d92004-134f-49d3-8e50-7abf92cd7ed0][bioe26]] 
+*** [[id:80d92004-134f-49d3-8e50-7abf92cd7ed0][bioe26]]
 ** Next sem
 ***  
 ** future
+#+BEGIN_SRC emacs-lisp
+;(org-roam-node-from-id "80d92004-134f-49d3-8e50-7abf92cd7ed0")
+(setq amogus (org-roam-node-from-id "53cc3b56-f663-4d95-a45f-851c0f7410e7"))
+
+#+END_SRC
+
+#+RESULTS:
+: #s(org-roam-node "/home/elamd/notes/20211004174837-futurecourses.org" nil (24923 46212 479636 53000) (24923 46212 476302 720000) "53cc3b56-f663-4d95-a45f-851c0f7410e7" 2 96 nil nil nil nil "cs170" (("CATEGORY" . "20211004174837-futurecourses") ("PREREQS" . "[[id:9cc23d47-c537-4606-bbcc-ba08170577e6][cs70]] [[id:bf142b12-94eb-4561-9b84-0a5c04e5ff2d][cs61b]]") ("ID" . "53cc3b56-f663-4d95-a45f-851c0f7410e7") ("BLOCKED" . "") ("FILE" . "/home/elamd/notes/20211004174837-futurecourses.org") ("PRIORITY" . "B") ("ITEM" . "cs170")) ("cs") nil nil nil)
 
 [[id:a33d7edb-eaf0-4601-ac04-87e32755885c][futurecourses]]
