@@ -20,22 +20,24 @@ nothing... yet >:)
 ***  
 ** future
 #+BEGIN_SRC emacs-lisp
-  (print "amogus")
-  (setq amongus (org-roam-node-from-id "53cc3b56-f663-4d95-a45f-851c0f7410e7"))
-  (setq amogus (org-roam-node-properties amongus))
-  (if (string= (car (car (cdr amogus))) "PREREQS")
-    (print "found")
-    (print "not"))
-  ;(while amogus
-    ;(print (car amogus))
-    ;(setq amogus (cdr amogus)))
-  ;(loop for x in (org-roam-node-properties amogus))
+(defun getPrereqs (id)
+    (print "amogus")
+    (setq amongus (org-roam-node-from-id id))
+    (setq amogus (org-roam-node-properties amongus))
+    (if (string= (car (car (cdr amogus))) "PREREQS")
+      (cdr (car (cdr amogus)))
+    (while amogus
+    (if (string= (car (car (cdr amogus))) "PREREQS")
+      (cdr (car amogus)))
+    (setq amogus (cdr amogus))) nil)
 
+)
+(print (getPrereqs "53cc3b56-f663-4d95-a45f-851c0f7410e7"))
 
 #+END_SRC
 
 #+RESULTS:
-: found
+: [[id:9cc23d47-c537-4606-bbcc-ba08170577e6][cs70]] [[id:bf142b12-94eb-4561-9b84-0a5c04e5ff2d][cs61b]]
 
 
 [[id:a33d7edb-eaf0-4601-ac04-87e32755885c][futurecourses]]
