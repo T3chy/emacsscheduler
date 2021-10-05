@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       9cc23d47-c537-4606-bbcc-ba08170577e6
+:END:
+#+title: cs70
+

@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       fdf74abd-8449-4783-a092-cefd352411ce
+:END:
+#+title: math1b
+

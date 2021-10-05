@@ -1,0 +1,145 @@
+:PROPERTIES:
+:ID:       a33d7edb-eaf0-4601-ac04-87e32755885c
+:END:
+#+title: futurecourses
+* cs
+** cs170
+:PROPERTIES:
+:ID:       53cc3b56-f663-4d95-a45f-851c0f7410e7
+:prereqs: [[id:9cc23d47-c537-4606-bbcc-ba08170577e6][cs70]]
+:END:
+** cs188
+:PROPERTIES:
+:ID:       9ed8bec0-76b7-42ff-8858-bf7046b7d354
+:END:
+** cs61c
+:PROPERTIES:
+:ID:       92a591d0-a222-404b-a8e4-3a399e897546
+:END:
+** cs161
+:PROPERTIES:
+:ID:       516bf000-60c7-4fd1-bc8e-230b95708f35
+:END:
+** cs162
+:PROPERTIES:
+:ID:       378402e9-a0ee-4a41-9f7a-7c6e718d149c
+:END:
+** cs288
+:PROPERTIES:
+:ID:       3aec8d0b-c09f-48f7-9ec1-cf8478ba866e
+:END:
+** cs176
+:PROPERTIES:
+:ID:       b59b9a94-0a60-469e-8d0e-d878de130542
+:END:
+** cs152
+:PROPERTIES:
+:ID:       8dede7bc-ab6e-45d7-8898-86edab5e4178
+:END:
+** cs267
+:PROPERTIES:
+:ID:       4446336e-de0a-44a2-95de-77b4be868191
+:END:
+** cs149
+:PROPERTIES:
+:ID:       d4380e0d-4c30-426d-8cbb-eb43a5a6af6d
+:END:
+** cs249
+:PROPERTIES:
+:ID:       1331179f-2745-4b50-934c-14120a429736
+:END:
+** cs289
+:PROPERTIES:
+:ID:       76e41802-250b-4e13-891a-a166b4f17e35
+:END:
+** cs164
+:PROPERTIES:
+:ID:       aae35886-893f-47fa-9b73-2dcc743025e8
+:END:
+* eecs
+** eecs16a
+:PROPERTIES:
+:ID:       5d8654b9-cf61-4ee6-a3e0-200af5e559b1
+:END:
+** eecs16b
+:PROPERTIES:
+:ID:       1ce7fddc-5496-4f3b-904d-e3ad2e7ed66b
+:END:
+** eecs126
+:PROPERTIES:
+:ID:       a9b6ed39-6399-442f-9796-49aa8dc1079c
+:END:
+* bioe
+** bioe11
+:PROPERTIES:
+:ID:       d0a0c468-322e-4d4d-a844-654006e526b8
+:END:
+** bioe100
+:PROPERTIES:
+:ID:       963d2174-000c-4c3e-bde1-a57d7dc5f419
+:END:
+** bioe104
+:PROPERTIES:
+:ID:       a81b649b-c590-4753-a4fc-879b46ea0eb6
+:END:
+** bioe131
+:PROPERTIES:
+:ID:       e585f4ad-2501-4813-aaef-37413f5eb9b2
+:END:
+** bioe103
+:PROPERTIES:
+:ID:       59128b20-b627-4750-9785-7d4f017bb9f7
+:END:
+** bioe121
+:PROPERTIES:
+:ID:       4499d40a-96ae-4d9e-9b8a-b9c83c94ac78
+:END:
+** bioe121l
+:PROPERTIES:
+:ID:       91ee4396-f74b-4c2f-a2ea-b4a06ffb9bfe
+:END:
+* ee
+** ee147
+:PROPERTIES:
+:ID:       4a4000c9-ffa0-43a5-b893-b69b95fc1a40
+:END:
+* physics
+** physics7a
+:PROPERTIES:
+:ID:       548b82ae-96da-4634-9c00-07e38b8b8258
+:END:
+** physics7b
+:PROPERTIES:
+:ID:       a3b13d6b-e0e7-476f-ad7d-bb23cbb5c850
+:END:
+* math
+** math53
+:PROPERTIES:
+:ID:       f07e9b1a-1504-4c12-b97f-bfff68dc81e0
+:END:
+** math54
+:PROPERTIES:
+:ID:       496568fd-ebe2-47b5-9b1b-2b6749f120d0
+:END:
+** math104
+:PROPERTIES:
+:ID:       cfa8df8a-0014-49d5-aa0f-b82517d906ae
+:END:
+* chem
+** chem3a
+:PROPERTIES:
+:ID:       3f300af1-8070-4fe8-91c4-a420768e4c5a
+:END:
+** chem3al
+:PROPERTIES:
+:ID:       a7b74cbc-9ec1-4611-9c3f-68af6f55d948
+:END:
+* non-tech
+** r1a
+:PROPERTIES:
+:ID:       22b88855-3b49-4def-9bc6-786126247db9
+:END:
+** r1b
+:PROPERTIES:
+:ID:       15b0d869-f55c-40c2-977a-df56f59fe2d9
+:END:
