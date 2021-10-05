@@ -19,6 +19,10 @@ nothing... yet >:)
 ** Next sem
 ***  
 ** future
+
+* TODO
+regex for ids, find out how to only look at above headlines
+highlight courses w/ no prereqs in red or smth
 #+BEGIN_SRC emacs-lisp
     (defun getProp (id &optional prop)
     (setq prop (or (prop "PREREQS")))
