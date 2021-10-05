@@ -2,4 +2,75 @@
 :ID:       9cc23d47-c537-4606-bbcc-ba08170577e6
 :END:
 #+title: cs70
+* ECC
+$R(i)$ is just what we receive, not a polynomial
+GOAL: Communicate $n$ packets with $k$ general errors
+* Counting
+Sample space: can sample with / without replacement
+Discrete probability
+A one-to-one function *IS* a permutation
+** Without replacement
+$k$ samples
+*** order matters: $\frac{n!}{(n-k)!}$
+*** Order doesn't matter: second rule $\binom{n}{k} \equiv \frac{n!}{(n-k)!k!}$ when set is distinct
+** With replacement
+$k$ items into $n$ groups
+*** order matters: $n^k$
+*** order doesn't matter:  second rule doesn't work :(
+second rule doesn't work cuz distribution of ordered sets is uneven relative to number of unorderd possibilities
+$\binom{k + n - 1}{n - 1}$; for each object, we have k things and we want to group them into n-1 bins
+(stars and bars diag; k stars, n-1 bars)
+** Zeroeth rule of counting
+If there is a one-to-one mapping between two sets (bijection), they have the same size
+** First rule of counting
+Objects made by choosing from $n_1$, $n_2$, $n_3$ where $n_k$ is the number
+of possibilities at step $k$ yields a possible $n_1 \cdot n_2 \cdot \ldots \cdot n_k$ objects.
+** Second rule of counting
+If order doesn't matter, count ordered objects and divide by number of orderings
+(when each unordered object corresponds equal numbers of ordered objects)
+Notation: to choose $k$ out of $n$ (with replacement), say
+
+$\binom{n}{k} \equiv \frac{n!}{k!(n-k)!}$
+** examples (without replacement)
+Orderings of MISSISSIPPI = $\frac{11!}{4!4!2!}$
+Orderings of ANAGRAM = $\frac{7!}{4!}$
+Poker hands = $\binom{52}{5}$
+*** How many 3-bit strings?
+tree:
+- choose first bit, fork (choose 0 or 1)
+- choose second bit, fork (choose 0 or 1)
+- choose third bit, fork (choose 0 or 1)
+number of leafs = how many 3 bit strings ($2 \cdot 2 \cdot 2 = 8$)
+*** How many functions $f$ map S to T?
+Think of $f$ of a table.
+$|T|$ ways to choose for $f(s_1)$, $|T|$ ways to choose for $f(s_2)$, etc.
+$|T|^{|S|}$
+*** How many poker hands?
+Order doesn't matter
+$52 \cdot 51 \cdot 50 \cdot 49 \cdot 48$
+Orderings: $5!$
+Therefore, num of (unordered) hands is $\frac{52 \cdot 51 \cdot 50 \cdot 49 \cdot 48}{5!}$
+$\equiv \frac{52!}{5! \cdot 47!}$
+*** Choose k out of $n$ (unordered)
+For $k = 2$
+$\frac{n \cdot (n - 1)}{2!} \equiv \frac{n!}{(n-2)! \cdot 2!}$
+$\equiv \binom{n}{2}$
+For $k = 3$
+$\frac{n \cdot (n - 1) \cdot (n - 2)}{3!} \equiv \frac{n!}{(n-3)! \cdot 3!}$
+$\equiv \binom{n}{3}$
+See second rule
+
+** examples (with replacement)
+*** How many ways can alice, bob, and eve split 5 dollars?
+Alice gets 2 bob 1 eve 2; let * = 1 dollar, we have \**|*|**
+Number of stars = 5 (dollars), number of bars = (3 - 1) = 2
+Alice gets 0 bob 1 eve 4; |*|****
+Each split "is" (corresponds to) a sequence of stars and bars
+Number of splits == number of star / bar diagram
+CHOOSE 2 places to put bars out of 7 choices
+$\binom{7}{2} \equiv \frac{7!}{(7 - 2)!2!}$
+OR choose to place stars, $\binom{7}{5}$
+
+
+
 
