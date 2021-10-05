@@ -1,0 +1,24 @@
+:PROPERTIES:
+:ID:       7a2796da-2e40-4fff-84fb-fbdd860d6328
+:END:
+#+title: x220
+* Hardware Stuff
+** TODO recieve and test NanoHub usb multiplexer(s), see if I can use 2 of them to get 3 ports
+[[https://www.smart-prototyping.com/index.php?route=account/order/info&order_id=37718][Order info, still processing?]]
+1 for BitMagic, one for BlackMagic, one for USB-C 2.0 out
+** Case modifications
+*** TODO Cut out palmrest for JTAG/SWD and Logic Analyzer
+Finalize how I will secure them first tho I mean it's whatever they're like $10
+*** TODO Maybe model / print an expresscard slot thing to hold them
+so I don't have to break the metal sleeve-thingy for expresscard devices
+** BitMagic Logic Analyzer
+*** TODO Write a script for clean interfacing
+probably make it just bash, use sigrok-cli and maybe have like i2c easily decodable
+** BlackMagic JTAG/SWD/UART Thingy
+*** TODO Write a script for clean interfacing
+idk what it'll be yet
+*** TODO grok swd/jtag
+probably watch like eevblog or something
+* Software Stuff
+** Emacs
+*** TODO grok it
