@@ -1,0 +1,18 @@
+:PROPERTIES:
+:ID:       f5083991-df93-4b12-a956-1843930f7238
+:END:
+#+title: coursescheduler
+
+* Organization
+** class properities
+Each class is a org-roam node (with unique id), and the following properties
+- :ID: the unique ID for this item
+- :prereqs: the prereqs (as org-roam references) for the class
+- :units: integer, number of units the class is
+- :div: lowdiv, updiv, grad
+- :grade: A+ -> F / P / NP / null if haven't taken
+** Schedule .org file
+- headline per semester
+- outputs to 4 year planning pdf if I can get source for it
+- calculates gpa (weighted w/ course units)
+

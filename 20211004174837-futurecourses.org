@@ -6,20 +6,24 @@
 ** cs170
 :PROPERTIES:
 :ID:       53cc3b56-f663-4d95-a45f-851c0f7410e7
-:prereqs: [[id:9cc23d47-c537-4606-bbcc-ba08170577e6][cs70]]
+:prereqs:  [[id:9cc23d47-c537-4606-bbcc-ba08170577e6][cs70]] [[id:bf142b12-94eb-4561-9b84-0a5c04e5ff2d][cs61b]]
 :END:
 ** cs188
 :PROPERTIES:
 :ID:       9ed8bec0-76b7-42ff-8858-bf7046b7d354
+:prereqs: [[id:ae59b73e-705f-4735-9e78-a3bbabf99e6e][cs61a]] [[id:bf142b12-94eb-4561-9b84-0a5c04e5ff2d][cs61b]] [[id:9cc23d47-c537-4606-bbcc-ba08170577e6][cs70]]
 :END:
 ** cs61c
 :PROPERTIES:
 :ID:       92a591d0-a222-404b-a8e4-3a399e897546
+:prereqs: [[id:ae59b73e-705f-4735-9e78-a3bbabf99e6e][cs61a]] [[id:bf142b12-94eb-4561-9b84-0a5c04e5ff2d][cs61b]]
 :END:
 ** cs161
 :PROPERTIES:
 :ID:       516bf000-60c7-4fd1-bc8e-230b95708f35
+:prereqs:[[id:92a591d0-a222-404b-a8e4-3a399e897546][cs61c]] [[id:9cc23d47-c537-4606-bbcc-ba08170577e6][cs70]] 
 :END:
+
 ** cs162
 :PROPERTIES:
 :ID:       378402e9-a0ee-4a41-9f7a-7c6e718d149c
