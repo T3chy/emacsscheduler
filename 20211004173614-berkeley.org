@@ -24,32 +24,47 @@ nothing... yet >:)
 regex for ids, find out how to only look at above headlines
 highlight courses w/ no prereqs in red or smth
 #+BEGIN_SRC emacs-lisp
-    (defun getProp (id &optional prop)
-    (setq prop (or (prop "PREREQS")))
-    ;returns prereqs property of a node with :ID: of id
-	(setq amongus (org-roam-node-from-id id))
-	(setq amogus (org-roam-node-properties amongus))
+	(defun getProp (id &optional prop)
+	(or prop (setq prop "PREREQS"))
+	;returns prereqs property of a node with :ID: of id
+	    (setq amongus (org-roam-node-from-id id))
+	    (setq amogus (org-roam-node-properties amongus))
 
-    ;hard check the 'correct' index for prereqs (faster)
-	(if (string= (car (car (cdr amogus))) prop)
-	  (cdr (car (cdr amogus)))
-      (cdr (nth (cl-position prop (mapcar 'car amogus) :test 'equal) amogus))))
+	;hard check the 'correct' index for prereqs (faster)
+	    (if (string= (car (car (cdr amogus))) prop)
+	      (cdr (car (cdr amogus)))
+	  (cdr (nth (cl-position prop (mapcar 'car amogus) :test 'equal) amogus))))
 
-    (defun getPreReqs (id)
-      (setq pr (getProp id))
-      (if (eq "" pr) nil
-        ; regex for ids
+    (defun string-find-all (regexp str &optional start-pos)
+      (cl-loop for match-pos = (string-match regexp str start-pos)
+	       while match-pos
+	       collect (match-string 1 str)
+	       do (setf start-pos (1+ match-pos))))
+    
+  (defun find-all (regex string)
+    (let ((matches))
+      (with-temp-buffer
+	(insert string)
+	(goto-char (point-min))
+	(while (re-search-forward regex (point-max) t)
+	  (push (match-string 1) matches)))
+      matches))
 
-    )
-  ;  (print (car (print (split-string (getPrereqs "53cc3b56-f663-4d95-a45f-851c0f7410e7") " "))))
-    (print (eq "" (getPrereqs "378402e9-a0ee-4a41-9f7a-7c6e718d149c")))
+	(defun getPreReqs (id)
+	  (setq pr (getProp id))
+	  (if (eq "" pr) nil
+	    (find-all "id:\\(.+?\\)\\]"  pr)))
 
-    (print (getPrereqs "92a591d0-a222-404b-a8e4-3a399e897546"))
+      ;  (print (car (print (split-string (getPreReqs "53cc3b56-f663-4d95-a45f-851c0f7410e7") " "))))
+	;(print (getPreReqs "378402e9-a0ee-4a41-9f7a-7c6e718d149c"))
 
+	(print (car (getPreReqs "92a591d0-a222-404b-a8e4-3a399e897546")))
+
+    (string-find-all "id:\\(.+?\\)\\]" "The name of file is {NAME} and its location is {PATH}/{NAME}")
 #+END_SRC
 
 #+RESULTS:
-: [[id:ae59b73e-705f-4735-9e78-a3bbabf99e6e][cs61a]] [[id:bf142b12-94eb-4561-9b84-0a5c04e5ff2d][cs61b]]
+
 
 
 [[id:a33d7edb-eaf0-4601-ac04-87e32755885c][futurecourses]]
