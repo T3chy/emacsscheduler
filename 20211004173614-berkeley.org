@@ -20,19 +20,18 @@ nothing... yet >:)
 ***  
 ** future
 #+BEGIN_SRC emacs-lisp
-(defun getPrereqs (id)
-    (print "amogus")
-    (setq amongus (org-roam-node-from-id id))
-    (setq amogus (org-roam-node-properties amongus))
-    (if (string= (car (car (cdr amogus))) "PREREQS")
-      (cdr (car (cdr amogus)))
-    (while amogus
-    (if (string= (car (car (cdr amogus))) "PREREQS")
-      (cdr (car amogus)))
-    (setq amogus (cdr amogus))) nil)
+  (defun getPrereqs (id)
+  ;returns prereqs property of a node with :ID: of id
+      (setq amongus (org-roam-node-from-id id))
+      (setq amogus (org-roam-node-properties amongus))
 
-)
-(print (getPrereqs "53cc3b56-f663-4d95-a45f-851c0f7410e7"))
+  ;hard check the 'correct' index for prereqs (faster)
+      (if (string= (car (car (cdr amogus))) "amogu")
+	(cdr (car (cdr amogus)))
+  (cdr (nth (cl-position "PREREQS" (mapcar 'car amogus) :test 'equal) amogus)))
+
+  )
+  (print (getPrereqs "53cc3b56-f663-4d95-a45f-851c0f7410e7"))
 
 #+END_SRC
 
