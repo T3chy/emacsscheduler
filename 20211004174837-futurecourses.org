@@ -6,7 +6,7 @@
 ** cs170
 :PROPERTIES:
 :ID:       53cc3b56-f663-4d95-a45f-851c0f7410e7
-:prereqs:  [[id:9cc23d47-c537-4606-bbcc-ba08170577e6][cs70]] [[id:bf142b12-94eb-4561-9b84-0a5c04e5ff2d][cs61b]]
+:prereqs: [[id:bf142b12-94eb-4561-9b84-0a5c04e5ff2d][cs61b]] [[id:9cc23d47-c537-4606-bbcc-ba08170577e6][cs70]] 
 :END:
 ** cs188
 :PROPERTIES:
