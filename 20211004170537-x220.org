@@ -16,6 +16,7 @@ so I don't have to break the metal sleeve-thingy for expresscard devices
 probably make it just bash, use sigrok-cli and maybe have like i2c easily decodable
 ** BlackMagic JTAG/SWD/UART Thingy
 *** TODO Write a script for clean interfacing
+5v not present on UART or jtag connectors ?? Lights on and stuff, maybe software/firmware setting???
 idk what it'll be yet
 *** TODO grok swd/jtag
 probably watch like eevblog or something
