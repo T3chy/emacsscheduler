@@ -1,0 +1,47 @@
+:PROPERTIES:
+:ID:       b7978b32-b33b-4ae1-b225-dd7adc2bd808
+:END:
+#+title: cs61c
+
+* Study
+In order from the web site
+** TODO Chapter 3: Arithmetic for Computers
+*** 3.5: Floating Point
+*** 3.9: Fallacies and Pitfalls
+*** 3.2: Addition and Subtraction
+** TODO Chapter 2: Arithmetic for Computers
+*** 2.1: Intro
+*** 2.2: Operators of the Computer Hardware
+*** 2.3: Operands of the Computer Hardware
+*** 2.9: Communicating with People
+*** 2.10: RISC-V Addressing for Wide Immediates and Addresses
+*** 2.6: Logical Operations
+*** 2.7: Instructions for Making Decisions
+*** 2.8: Supporting Procedures in Computer Hardware
+*** 2.5: Representing Instructions in the Computer
+*** 2.12: Translating and Starting a Program
+*** 2.11
+** TODO Chapter 4: The Processor
+*** 4.1: Intro
+*** 4.3: Building a Datapath
+*** 4.4: A Simple Implementation Scheme
+*** 4.6
+*** 4.7
+*** 4.8
+*** 4.9
+*** 4.10
+** TODO Chapter 5: Large and Fast: Exploiting Memory Hierarchy
+*** 5.1
+*** 5.2
+*** 5.3
+*** 5.4
+*** 5.8
+*** 5.9
+*** 5.13
+*** 5.7
+*** 5.5
+*** 5.11
+*** 5.10
+** TODO Chapter 6: Parallel Processors from Client to Cloud
+*** 6.5: Multicore and Other Shared Memory Multiprocessors
+

@@ -1,0 +1,24 @@
+:PROPERTIES:
+:ID:       56d4820b-419d-4888-827b-99740a338df7
+:END:
+#+title: chem3a
+
+* Study
+Chapters in order as outlined from sp21 syllabus (Vollhardt)
+** TODO Chapter 1: Structure and Bonding in Organic Molecules
+** TODO Chapter 2: Structure and Reactivity
+** TODO Chapter 3: Reactions of Alkanes
+** TODO Chapter 4: Cyclic Alkanes
+** TODO Chapter 5: Stereoisomers
+** TODO Chapter 6: Properties and Reactions of Haloalkanes
+** TODO Chapter 7: Further Reactions of Haloalkanes
+** TODO Chapter 8: Hydroxy Functional Group
+** TODO Chapter 9: Further Reactions of Alcohols and the Chemistry of Ethers
+** TODO Chapter 11: Introduction to Alkenes
+** TODO Chapter 12: Reactions of Alkenes
+** TODO Chapter 13: Alkynes
+
+
+
+
+
