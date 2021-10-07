@@ -6,8 +6,61 @@
 * Study
 In order from the web site
 ** TODO Chapter 3: Arithmetic for Computers
-*** 3.5: Floating Point
+*** 3.5: Floating Point                                             :trivial:
+"Speed gets you nowhere if you're going the wrong way"
+Floats = scientific notation
+
+$(-1)^{sign bit}$ Normalized number ^exponent
+
+Of the form $1.xxxx \cdot 2^{yyyy}$
+
+| Bit type | single precision float (32bit) | double precision float (64bit) |
+|----------+--------------------------------+--------------------------------|
+| Sign bit | 1 bit                          | 1 bit                          |
+| Exponent | 8 bits                         | 8 bits                         |
+| Fraction | 23 bits                        | 20 bits + 32 bits              |
+|----------+--------------------------------+--------------------------------|
+
+
+Floats and ints have different registers (semi-historical reasons, floating point units used to be discrete add-ons)
+
+Float register f0 is not hard wired to 0 like int register x0 is.
+
+**** IEEE 754 Float Standard
+$(-1)^{Sign Bit} \cdot (1 + fraction) \cdot 2^{Exponent}$
+
+leading 1 bit implied on fraction (called /significand/ with implied 1)
+
+
+Biggest exponent (255 for single 2047 for double) reserved for special symbols (e.g $\pm inf$ )
+which can be used to handle undefined behavior such as div by 0 without throwing exceptions
+
+Because the exponent bits are first, we can sort really well! As long as the signs are equal...
+Biased notation:
+
+Offset exponent by a given amount in order to efficently compare exponents of different signedness
+
+IEEE 754 uses an offset of 127 for single precision and 1023 for double.
+
+Example: exponent of -1 is represented as 126 because $126 - 127 = -1$
+**** Floating point Arethmetic
+Addition/Subtraction: Shift significands until exponents are ==, do the add/sub,
+check for over/underflow re-normalize and round if needed
+
+Multiplication: Add exponents, subtract bias to get new biased exponent (otherwise bias double counted),
+multiply significands, check for over/underflow re-normalize and round if needed. Xor sign bit
+**** Terms
+Overflow = exponent too large (or small cuz 2's complement)
+
+Underflow = fraction too small
+
+Exception = Unschedule event (disrupts program execution)
+
+Interrupt = Exception from outside the proccessor
+
+Guard = 2 (or more?) bits used in intermediary float calculations to improve accuracy
 *** 3.9: Fallacies and Pitfalls
+
 *** 3.2: Addition and Subtraction
 ** TODO Chapter 2: Arithmetic for Computers
 *** 2.1: Intro
