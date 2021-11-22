@@ -2,4 +2,90 @@
 :ID:       fdf74abd-8449-4783-a092-cefd352411ce
 :END:
 #+title: math1b
+* diffeq
+** Modeling with differential equations
+Differential equation = equation involving a function and its derivatives
+
+e.x $y' = y$, $y''' + xy' = y''$
+
+(n)th order = (n)th derivative is involved
+
+Anything (y = f(x)) that satisfies the constraint of a diffeq is a solution.
+
+*important*: equality (in a diffeq) must be an equality of functions
+
+A given differential equation has an infinite family of solutions
+
+Many natural phenomena can be modeled with diffeqs
+
+** Separable Equations
+A separable first-order diffeq is of the form $y' = g(x)h(y)$
+
+e.x $y' = xy^2$, $y'y = x$
+
+$y' = x + y$ is NOT a separable first-order diffequation
+
+General solution:
+- (constant) solve h(k) = 0, then y(x) = k is the constant solution)
+- (non-constant) treat $y' = \frac{dy}{dx}$ and rearrange the equation into the form
+  $\frac{1}{h(y)} dy = g(x)dx$ and integrate both sides
+
+*important* once you assign a value to a certain variable (e.g. "c"), it is that value!
+use another variable if you need another constant
+
+*** Orthogonal Trajectories
+orthogonal = "at right angles" / "perpendicular" (generalized to arbitrary dimension space)
+
+you have an orthogonal trajectory for a family of curves
+
+aim: given a family of curves, find possible orthogonal trajectories
+
+e.x $x^2 + y^2 = c^2$
+
+Orthogonal trajectory is a solution to $y' = \frac{-1}{\frac{-x}{y}} = y/x$
+** Models of population growth
+Model a population size with a function: $y(t) = $population size at time t
+
+has an initial size $y_0$
+
+Growth rate of population depends on the size of the population (differential equation)
+where k is rate of growth 
+
+natrual model:
+$y' = ky$, $y(t) = y_0e^{kt}$
+
+logistic model:
+$y'(t) = ky(1-\frac{y}{M})$ where M is carrying capacity
+
+$y(t) = \frac{1}{1 + Ae^{-kt}}$ where $A = \frac{M- y_0}{y_0}$ if $y_0 \neq 0$
+** Linear equations
+first order linear differential equation is of the form $\frac{dy}{dx} + a(x)y = b(x)$
+j
+e.x $xy' + y = 2sin(x)$ => $y' + \frac{1}{x}y = \frac{2sin(x)}{x}$
+
+NONLINEAR: $y' = xy^2$
+
+General solution uses the product rule in reverse
+
+Soln to $y' + a(x)y = b(x)$ is 
+$y = \frac{1}{e^{A(x)}}(\int{e^{A(x)b(x)dx}) + \frac{C}{A(x)}$
+
+Where $A'(x) = a(x)$ (A(x) is called the 'integrating factor')
+
+
+* complex numbers
+Extension of the reals: z = a + bi = (r, $\theta$)_p$
+- complex conjugate of z = a + bi is $\bar{z} = a - bi$
+- |z| = distance from z to (0,0) = r (for polar coordinates)
+- $|z|^2$ = (a + bi)(a - bi) = $z\bar{z}$
+- |z| = $\sqrt{z\bar{z}}$
+- inverse = $z^{-1} = \frac{(a - bi)}{a^2+b^2}$
+- given $w \in \mathbb{c}$, $|zw| = |z| \cdot |w|$
+
+There is a concept of 'distance' between complex numbers,
+so there exists a concept of complex convergent sequences and series
+
+given $z \in \mathbb{c}$, $e^z$ is defined by $1 + z + \frac{z^2}{2!} + \ldots$
+
+Euler's identity: $e^{iy} = cos(y) + i sin(y)
 
