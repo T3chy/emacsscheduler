@@ -70,3 +70,52 @@ Corollary to NFL: debating "which ML algorithm is better" is meaningless without
 (all algs are equally as good considering all contexts).
 
 Hence, inductive bias must be considerd on a case-by-case basis.
+** History
+"Reasoning age" (50s-early 70s): It was believed that Logical reasoning => intelligence
+
+Later in the 70s, it was realized that intelligence was more complicated than just reasoning (:()
+
+"Knowledge age" (mod-late 70s): developement of expert systems 
+
+idk lol a buncha stuff happened
+Michalski in 1983 divided/classified machine learning methods
+
+late 80s (reasoning age) saw mainstream of learning from examples as **symbolism learning** (decision trees, logic-based learning) 
+
+buncha stuff we will get to later I think
+** Application status
+ML is now very important in 'applied' areas (NLP, CV), and also provides support for interdisciplinary research (e.g bioinformatics)
+
+science is shifting from theory + experiment to theory + experiment + computation ("data science")
+
+ML allows us to work with very large data sets.
+
+**Data minig** is about knowledge discovery from massive datasets, influences statistics via ML
+
+It's important, ok?
+
+Also important to further understand "how humans learn"
+** Excercises
+*** What is the version space if Table 1.1 contains only the examples 1 and 4?
+(color=*, root=*, sound=*)
+(color=*, root=curly, sound=*)
+(color=*, root=*, sound=muffled)
+(color=*, root=*, sound=mufled)
+(color=green, root=*, sound=*)
+(color=green, root=*, sound=mufled)
+(color=green, root=curly, sound=mufled)
+you get the gist
+*** If we use at most $k$ conjunction clauses to express the hypothesis space of the watermellon classification problem in Table 1.1, what is the total number of possible hypotheses?
+ma
+1 + ($k$ + 1)!
+*** Inductive bias when data is noisy 
+Take 'simpler' model (fewer layers, fewer parameters). Prefer consistent models over ones with breakout successes
+***  Change misclassification error rate, prove NFL still works
+Just multiply all algorithms by the inverse of the new performance measurement and you have original NFL
+(we only care, to prove NFL, that the algs are equivalent- not their exact value)
+*** Describe ML in differnet subcomponents of internet search
+autocomplete- how do people searching these first phrases tend to end their questions / entries?
+search ordering- which sites do people with a similar question / phrase tend to click on?
+ads- same as search ordering
+
+
