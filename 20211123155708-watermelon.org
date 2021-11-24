@@ -111,7 +111,8 @@ ma
 *** Inductive bias when data is noisy 
 Take 'simpler' model (fewer layers, fewer parameters). Prefer consistent models over ones with breakout successes
 ***  Change misclassification error rate, prove NFL still works
-Just multiply all algorithms by the inverse of the new performance measurement and you have original NFL
+Because we are iterating over *all* samples not in the training set, changing the performance measurement just 'swaps' some values in the summation
+and because this is a (supposedly) finite summation, changing the order does not affect the value of the summation.
 (we only care, to prove NFL, that the algs are equivalent- not their exact value)
 *** Describe ML in differnet subcomponents of internet search
 autocomplete- how do people searching these first phrases tend to end their questions / entries?
@@ -119,3 +120,65 @@ search ordering- which sites do people with a similar question / phrase tend to 
 ads- same as search ordering
 
 
+* Model selection and Validation
+** Empirical error and overfitting 
+The **error rate** is the proprtion of incorrectly classified samples ($E = \frac a m, where $a$ out of $m$ samples are misclassified).
+Accuracy is the complement of the error rate
+
+The error calculated on the training set is called **empirical error**, while the error found on new samples is called **generalization error**
+
+Often when **empirical error** is zero (model perfectly fits training data) **generalization error** rears its ugly head
+and we are faced with an **overfitted** model. (overfitting is learning the training data ``too well'')
+
+The opposite of **overfitting**, of course, is **underfitting**, which occurs when the learner fails to learn general properties of the training examples
+
+Overfitting commonly stems from learning non-general peculiarities of training examples, rather than just the common traits
+
+Usually, machine learning problems are NP-Hard (e.g playing Super Mario Bros.), but many learning algorithms run in polynomial time.
+
+Thus, if we can show that overfitting can be avoided, we have a constructive proof for P=NP
+
+Underfitting is easier to overcome. Just train more lol
+
+** Evaluation methods
+
+Set some data aside during learning as a **testing set**, and use the error against that set (**testing error**) as an approximation for
+the generalization error.
+
+This assumes samples are independently and identically samples from the ground-truth distribution.
+
+Works best if testing set and training set are as independent as possible.
+
+Strategies for splitting the dataset D into a training set S and a testing set T include
+*** Hold-Out
+Split D into two disjoint subsets: S and T ($D = S \cup T$ and $S \cap T = \emptyset$)
+
+The split ratio is always a tradeoff- usually between 2/3 and 4/5 of the samples are used for training tho
+We can (and usually) do multiple differnet splits of D (even at the same ratio) and average the testing error across them
+*** Cross-Validation
+Split D into $k$ disjoint subsets with similar sizes.
+
+In each trial of cross-validation, use the union of $k-1$ sets as the training, and the last set as the testing set.
+
+Repeat the process $k$ times, so each subset is used as the testing set exactly once.
+
+Average over $k$ trials to get our final **testing error**.
+
+This is also known as $k$-fold cross-validation
+
+$k$ is commonly chosen as 10, but other common values include 5 and 20
+
+Often, the data is split into the $k$ subsets $p$ times and averaged again to get $p$-time $k$-fold cross-validation
+
+Special case of cross-validation: Leave-One-Out (LOO), where for a dataset D of $m$ samples, $k$ = $m$
+LOO is good, but has a very high computational cost (training $m$ models)- not necessarily more accurate (no free lunch!)
+*** Bootstrapping 
+Bootstrapping trains on $m$ samples randomly chosen (with replacement) from D of size $m$, and uses the samples not picked (~36.8%) as the testing set.
+This is useful when the dataset is small, or we can't really split it u.
+
+Bootstrapping is biased tho (because it changes the original data distribution our model is trained on),
+so we usually don't use it when we have abundant data.
+*** Parameter tuning and final model
+for models with (usually real-valued) (hyper?)parameters, we usually split out an extra disjoint subset from D, called the **validation set**, which we
+use to optimize parameters (with a step size cuz real values).
+This gives us a **training set** for the model, a **validation set** for the parameters, and a **testing set** to estimate generalization error.
