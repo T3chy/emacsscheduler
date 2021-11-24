@@ -1,0 +1,72 @@
+:PROPERTIES:
+:ID:       f4fd38b3-2378-45d7-b931-e94eef78396f
+:END:
+#+title: watermelon
+
+* Intro
+** Intro
+**Machine learning** means "improving system performance by learning from experience via computational methods"
+
+**learning algorithms** build **models** from **data**
+
+**models** make **predictions** on **new observations**
+** Terminology
+A **data set** is a colletion of **records** (or **instances** / **samples**)
+
+each **record** contains the description of an event or object (**attributes** or **features**).
+A **record** is also called a **feature vector**, as it is defined as a collection of **features**
+
+to **train** (or **learn**) a model, we use **training data**
+(where each sample is a **training example**, and the set of all samples is called the **training set*)
+
+A **learned model** is also called a **hypothesis**
+Models are also sometimes called **learners** (machine learning algorithms instantiated with data and parameters)
+Goal: find or approximate **ground-truth** 
+
+Outcome of a sample is called its **label**
+Sample + label = **example**
+
+When prediction output is discrete, the problem is a **classification** problem (binary if only two possible classes, multiclass if there are more)
+When prediction output is continuous, the problem is a **regression** problem.
+
+A **prediction problem** (supervised learning) is to establish a mapping $f : x \Rightarrow Y$
+from the input space $x$ to the output space $y$, learning from a (labeled) training set 
+
+**Testing** means making predicitons from a trained (learned) model
+
+In contrast to classification, **Clustering** (unsupervised) clusters unlabeled data sharing traits (e.g PCA), and can provide insights that form the basis
+for further analysis
+
+**Generalization** is the ability for a model to work on samples outside of the training set
+
+Generally assume our training data is a good representation of the (assumed to be i.i.d) distribution of all samples
+
+More training samples => better-generalized model
+** Hypothesis space
+**Induction** moves from specialization to generalization
+Learning from examples is **inductive** (known as **inductive learning**)
+
+We want to learn **concepts** from training data (this is hard, trained models are often black boxes)
+
+**Machine learning** can also be defined as the search in the **hypothesis space** for a **hypothesis** that is consistent with thetraining set.
+
+Hypothesis space is huge, training exmaples are finite. There can be a set of multiple hypotheses (**version space**) that are all consistent with the training data.
+
+Remember that here a **hypothesis** is just a trained model.
+** Inductive bias
+Defined as the bias of a learning algorithm toward a particular class of hypotheses
+(given a **version space** of hypotheses, the algorithm must select one model out of any number that are all equally consistent with the training data)
+
+All algorithms must have a bias, a bias-free algorithm would randomly choose models from the version space, which introduces non-determinism (bad)
+
+**Inductive bias** can be thought of as the 'heuristic' or value philosophy of a learning algorithm
+
+Occam's razor is commonly employed, (smoother is simpler, simpler is better) in deciding inductive bias, although there are instances where this leads the
+model to be inconsistent with new testing data (**out-of-sample error**).
+
+**no-free-lunch theorem**: "any two optimization algorithms are equivalent when their performance is averaged across all possible problems"
+
+Corollary to NFL: debating "which ML algorithm is better" is meaningless without considering the algorithms with respect to a certian problem
+(all algs are equally as good considering all contexts).
+
+Hence, inductive bias must be considerd on a case-by-case basis.
